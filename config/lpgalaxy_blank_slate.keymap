@@ -18,6 +18,7 @@
 #define NAV_L 1
 #define NUM_L 2
 #define SYM_L 3
+#define QWE_L 4
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -74,7 +75,7 @@ shifty: shift_caps_word {
 				&kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
 				&kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
 				&kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
-				&kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L            &kp SPACE                 &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
+				&kp LCTRL  &mo SYM_L   &kp LGUI  &kp LALT    &mo NAV_L            &kp SPACE                 &mo NUM_L      &kp LEFT    &kp UP     &kp DOWN      &to QWE_L
 				>;
 		};
 
@@ -105,6 +106,16 @@ shifty: shift_caps_word {
 				&trans     &kp COLON  &kp DLLR   &kp PRCNT   &kp CARET    &kp PLUS     &trans     &trans    &trans       &trans       &trans     &trans
 				&trans     &kp TILDE  &kp EXCL   &kp AT      &kp HASH     &kp PIPE     &trans     &trans    &trans       &trans       &trans     &trans
 				&trans &trans        &trans     &kp RPAR        &trans                &trans             &trans      &trans   &trans &trans &trans
+				>;
+		};
+
+		qwerty_layer {
+			label = "Qwe";
+			bindings = <
+				&kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
+				&kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+				&kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
+				&trans     &trans     &trans     &kp RPAR    &trans                &trans                   &trans         &trans      &trans     &trans        &trans
 				>;
 		};
 	};
