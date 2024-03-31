@@ -46,6 +46,16 @@
 				)
 	};
 
+
+	 combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+    };
+
 	tap_dances {
 shifty: shift_caps_word {
 			compatible = "zmk,behavior-tap-dance";
@@ -55,17 +65,6 @@ shifty: shift_caps_word {
 			bindings = <&kp LSHFT>, <&caps_word>;
 		};
 	};
-
-	// Conditional layer only when we have less thumb keys
-#ifdef TBLE_DUAL_2U
-	cond_layers {
-		compatible = "zmk,conditional-layers";
-		tri {
-			if-layers = <NUM_L NAV_L>;
-			then-layer = <SYM_L>;
-		};
-	};
-#endif
 
 	keymap {
 		compatible = "zmk,keymap";
