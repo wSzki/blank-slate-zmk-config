@@ -12,21 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        return {
-            bindings = <&kp RET>;
-            key-positions = <20 21>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <14 15>;
-        };
-
-        bs {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
-        };
-
         bootloader {
             bindings = <&bootloader>;
             key-positions = <0 11 46>;
@@ -51,11 +36,6 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <42 43 44 45 36>;
         };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <2 3>;
-        };
     };
 
     keymap {
@@ -64,10 +44,10 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp Q      &kp W      &kp F   &kp P  &kp B     &kp MINUS  &kp EQUAL  &kp J     &kp L      &kp U      &kp Y     &kp SEMI
-&kp A      &kp R      &kp S   &kp T  &kp G     &kp LBKT   &kp RBKT   &kp M     &kp N      &kp E      &kp I     &kp O
-&kp Z      &kp X      &kp C   &kp D  &kp V     &kp APOS   &kp BSLH   &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH
-&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE             &kp BSPC  &kp ENTER  &kp RGUI   &kp RALT  &kp GRAVE
+&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J     &kp L      &kp U      &kp Y     &kp SEMI
+&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M     &kp N      &kp E      &kp I     &kp O
+&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH
+&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE            &kp BSPC  &kp ENTER  &kp RGUI   &kp RALT  &kp GRAVE
             >;
         };
 
