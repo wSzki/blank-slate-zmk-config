@@ -14,21 +14,6 @@
     combos {
         compatible = "zmk,combos";
 
-        return {
-            bindings = <&kp RET>;
-            key-positions = <20 21>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <14 15>;
-        };
-
-        bs {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
-        };
-
         bootloader {
             bindings = <&bootloader>;
             key-positions = <0 11 46>;
@@ -52,11 +37,6 @@
         btclrall {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <42 43 44 45 36>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <2 3>;
         };
     };
 
