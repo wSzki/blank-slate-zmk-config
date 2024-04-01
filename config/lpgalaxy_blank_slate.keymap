@@ -24,7 +24,7 @@
 
         bt0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <36 46 42>;
+            key-positions = <36 42 46>;
         };
 
         bt1 {
