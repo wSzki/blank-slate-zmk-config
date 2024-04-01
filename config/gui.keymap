@@ -18,6 +18,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ccc {
+            bindings = <&kp B>;
+            key-positions = <14 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
