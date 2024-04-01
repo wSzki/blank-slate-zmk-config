@@ -51,6 +51,11 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <42 43 44 45 36>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
     };
 
     keymap {
