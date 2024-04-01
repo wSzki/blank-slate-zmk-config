@@ -14,22 +14,22 @@
 
         bootloader {
             bindings = <&bootloader>;
-            key-positions = <0 11 46>;
+            key-positions = <0 11 45>;
         };
 
         reset {
             bindings = <&sys_reset>;
-            key-positions = <0 36 46>;
+            key-positions = <0 36 45>;
         };
 
         bt0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <36 42 46>;
+            key-positions = <36 42 45>;
         };
 
         bt1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <36 43 46>;
+            key-positions = <36 43 45>;
         };
 
         btclrall {
