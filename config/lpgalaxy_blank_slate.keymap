@@ -7,84 +7,79 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 / {
+    chosen { zmk,matrix_transform = &mit_transform; };
 
-	chosen {
-		zmk,matrix_transform =
-		&mit_transform;
-	};
+    combos {
+        compatible = "zmk,combos";
 
-	combos {
-		compatible = "zmk,combos";
+        return {
+            bindings = <&kp RET>;
+            key-positions = <20 21>;
+        };
 
-		return {
-			bindings = <&kp RET>;
-			key-positions = <20 21>;
-		};
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <14 15>;
+        };
 
-		esc {
-			bindings = <&kp ESCAPE>;
-			key-positions = <14 15>;
-		};
+        bs {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
 
-		bs {
-			bindings = <&kp BACKSPACE>;
-			key-positions = <8 9>;
-		};
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 11 46>;
+        };
 
-		bootloader {
-			bindings = <&bootloader>;
-			key-positions = <0 11 46>;
-		};
+        reset {
+            bindings = <&sys_reset>;
+            key-positions = <0 36 46>;
+        };
 
-		reset {
-			bindings = <&sys_reset>;
-			key-positions = <0 36 46>;
-		};
+        bt0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <36 46 42>;
+        };
 
-		bt0 {
-			bindings = <&bt BT_SEL 0>;
-			key-positions = <36 46 42>;
-		};
+        bt1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <36 43 46>;
+        };
 
-		bt1 {
-			bindings = <&bt BT_SEL 1>;
-			key-positions = <36 43 46>;
-		};
+        btclrall {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <42 43 44 45 36>;
+        };
 
-		btclrall {
-			bindings = <&bt BT_CLR_ALL>;
-			key-positions = <42 43 44 45 36>;
-		};
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
+    };
 
-		tab {
-			bindings = <&kp TAB>;
-			key-positions = <2 3>;
-		};
-	};
+    keymap {
+        compatible = "zmk,keymap";
 
-	keymap {
-		compatible = "zmk,keymap";
+        base_layer {
+            label = "Base";
+            bindings = <
+&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J      &kp L     &kp U      &kp Y     &kp SEMI
+&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E      &kp I     &kp O
+&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA  &kp DOT   &kp FSLH
+&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT  &kp RBKT   &kp LALT
+            >;
+        };
 
-		base_layer {
-			label = "Base";
-			bindings = <
-				&kp Q      &kp W      &kp F   &kp P  &kp B     &kp MINUS  &kp EQUAL  &kp J     &kp L      &kp U      &kp Y     &kp SEMI
-				&kp A      &kp R      &kp S   &kp T  &kp G     &kp LBKT   &kp RBKT   &kp M     &kp N      &kp E      &kp I     &kp O
-				&kp Z      &kp X      &kp C   &kp D  &kp V     &kp APOS   &kp BSLH   &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH
-				&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE             &kp BSPC  &kp ENTER  &kp RGUI   &kp RALT  &kp GRAVE
-				>;
-		};
-
-		layer_1 {
-			bindings = <
-				&none         &none          &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp N7  &kp N8  &kp N9   &kp HOME  &kp UP    &kp END    &kp PG_UP
-				&kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)  &kp N4  &kp N5  &kp N6   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
-				&kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(LPAR)  &kp LS(RPAR)  &kp N1  &kp N2  &kp N3   &trans    &trans    &trans     &trans
-				&kp MINUS     &kp EQUAL      &trans         &kp LS(LT)    &kp LS(GT)    &kp N0          &kp DOT  &trans    &trans    &trans     &trans
-				>;
-		};
-	};
+        layer_1 {
+            bindings = <
+&none         &none          &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp N7  &kp N8   &kp N9  &kp HOME  &kp UP    &kp END    &kp PG_UP
+&kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)  &kp N4  &kp N5   &kp N6  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
+&kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(LPAR)  &kp LS(RPAR)  &kp N1  &kp N2   &kp N3  &trans    &trans    &trans     &trans
+&kp MINUS     &kp EQUAL      &trans         &kp LS(LT)    &kp LS(GT)    &kp N0  &kp DOT  &trans  &trans    &trans    &trans
+            >;
+        };
+    };
 };
