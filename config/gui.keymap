@@ -5,25 +5,66 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
 
-	keymap {
-		compatible = "zmk,keymap";
+    combos {
+        compatible = "zmk,combos";
 
-		base_layer {
-			label = "Base";
-			bindings = <
-				&kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
-				&kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp QUOT
-				&kp LSHFT  &kp Z      &kp X      &kp C       &kp D          &kp V          &kp K            &kp H          &kp COMMA   &kp DOT    &kp SEMI      &kp RET
-				&kp LCTRL  &kp LALT &kp LGUI  &kp LALT    &kp LALT            &kp SPACE                 &kp LALT      &kp LEFT    &kp UP     &kp LALT     &kp LALT
-				>;
-		};
+        ccc {
+            bindings = <&kp B>;
+            key-positions = <14 40>;
+        };
+    };
 
-	};
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            label = "Base";
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp F      &kp P     &kp B       &kp J           &kp L     &kp U      &kp Y    &kp QUOT  &kp BKSP
+&kp TAB    &kp A  &kp R  &kp S      &kp T     &kp G       &bt BT_CLR_ALL  &kp N     &kp E      &kp I    &kp O     &kp QUOT
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp D     &kp V       &kp K           &kp H     &kp COMMA  &kp DOT  &kp SEMI  &kp RET
+                         &kp LCTRL  &kp LALT  &kp LGUI    &kp LALT        &kp LALT  &kp SPACE
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+    };
 };
-
