@@ -44,21 +44,22 @@
         base_layer {
             label = "Base";
             bindings = <
-&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J     &kp L      &kp U      &kp Y     &kp SEMI
-&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M     &kp N      &kp E      &kp I     &kp O
-&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH
-&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE            &kp BSPC  &kp ENTER  &kp RGUI   &kp RALT  &kp GRAVE
+&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J      &kp L     &kp U         &kp Y      &kp SEMI
+&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E         &kp I      &kp O
+&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA     &kp DOT    &kp FSLH
+&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp RGUI  &kp LA(HASH)  &kp GRAVE
             >;
         };
 
         layer_1 {
             bindings = <
-&none         &none          &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp N7  &kp N8  &kp N9   &kp HOME  &kp UP    &kp END    &kp PG_UP
-&kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)  &kp N4  &kp N5  &kp N6   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
-&kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(LPAR)  &kp LS(RPAR)  &kp N1  &kp N2  &kp N3   &trans    &trans    &trans     &trans
-&kp MINUS     &kp EQUAL      &trans         &kp LS(LT)    &kp LS(GT)    &kp N0          &kp DOT  &trans    &trans    &trans     &trans
+&none         &none          &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp N7  &kp N8   &kp N9  &kp HOME  &kp UP    &kp END    &kp PG_UP
+&kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)  &kp N4  &kp N5   &kp N6  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN
+&kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(LPAR)  &kp LS(RPAR)  &kp N1  &kp N2   &kp N3  &trans    &trans    &trans     &trans
+&kp MINUS     &kp EQUAL      &trans         &kp LS(LT)    &kp LS(GT)    &kp N0  &kp DOT  &trans  &trans    &trans    &trans
             >;
         };
     };
 };
+
 `
