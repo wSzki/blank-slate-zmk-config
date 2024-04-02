@@ -43,13 +43,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base_layer {
-            label = "Base";
+        layer_3 {
+            label = "Baseb";
             bindings = <
-&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J      &kp L     &kp U      &kp Y    &kp SEMI
-&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E      &kp I    &kp O
-&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
-&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT  &kp RBKT   &kp SQT
+&kp ESC    &kp Q     &kp W     &kp F     &kp P     &kp B      &kp J     &kp L      &kp U      &kp Y     &kp SEMI   &kp BSPC
+&kp TAB    &kp A     &kp R     &kp S     &kp T     &kp G      &kp M     &kp N      &kp E      &kp I     &kp O      &kp APOS
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp D     &kp V      &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH   &kp ENTER
+&kp LCTRL  &kp LGUI  &kp LGUI  &kp LGUI  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT   &kp RBKT  &kp GRAVE
             >;
         };
 
@@ -62,13 +62,13 @@
             >;
         };
 
-        layer_3 {
-            label = "Baseb";
+        base_layer {
+            label = "Base";
             bindings = <
-&kp ESC    &kp Q     &kp W     &kp F     &kp P     &kp B      &kp J     &kp L      &kp U      &kp Y     &kp SEMI   &kp BSPC
-&kp TAB    &kp A     &kp R     &kp S     &kp T     &kp G      &kp M     &kp N      &kp E      &kp I     &kp O      &kp APOS
-&kp LSHFT  &kp Z     &kp X     &kp C     &kp D     &kp V      &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH   &kp ENTER
-&kp LCTRL  &kp LGUI  &kp LGUI  &kp LGUI  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT   &kp RBKT  &kp GRAVE
+&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J      &kp L     &kp U      &kp Y    &kp SEMI
+&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E      &kp I    &kp O
+&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
+&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT  &kp RBKT   &kp SQT
             >;
         };
     };
