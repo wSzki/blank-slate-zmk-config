@@ -50,12 +50,12 @@
         };
 
         layout {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <0 36 40>;
         };
 
         tog3 {
-            bindings = <&to 3>;
+            bindings = <&to 2>;
             key-positions = <36 41>;
         };
     };
@@ -63,32 +63,22 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_3 {
+        BaseColemakDH {
             label = "Baseb";
             bindings = <
 &kp ESC    &kp Q     &kp W   &kp F  &kp P     &kp B        &kp J     &kp L      &kp U      &kp Y     &kp SEMI   &kp BSPC
 &kp TAB    &kp A     &kp R   &kp S  &kp T     &kp G        &kp M     &kp N      &kp E      &kp I     &kp O      &kp APOS
 &kp LSHFT  &kp Z     &kp X   &kp C  &kp D     &kp V        &kp K     &kp H      &kp COMMA  &kp DOT   &kp FSLH   &kp ENTER
-&kp LCTRL  &kp LGUI  &tog 3  &mo 1  &kp LALT  &lt 1 SPACE  &kp BSPC  &kp ENTER  &kp LBKT   &kp RBKT  &kp GRAVE
+&kp LCTRL  &kp LGUI  &tog 2  &mo 1  &kp LALT  &lt 1 SPACE  &kp BSPC  &kp ENTER  &kp LBKT   &kp RBKT  &kp GRAVE
             >;
         };
 
-        layer_1 {
+        ArrowKeys {
             bindings = <
-&none         &none          &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp N7  &kp N8   &kp HOME  &kp UP    &kp END    &kp PG_UP  &kp PG_UP
-&kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LBRC)  &kp LS(RBRC)  &kp N4  &kp N5   &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &kp PG_DN
-&kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(LPAR)  &kp LS(RPAR)  &kp N1  &kp N2   &kp N3    &trans    &trans     &trans     &trans
-&kp MINUS     &kp EQUAL      &trans         &kp LS(LT)    &kp LS(GT)    &kp N0  &kp DOT  &trans    &trans    &trans     &trans
-            >;
-        };
-
-        base_layer {
-            label = "Base";
-            bindings = <
-&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J      &kp L     &kp U      &kp Y    &kp SEMI
-&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E      &kp I    &kp O
-&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
-&kp LSHFT  &kp LCTRL  &kp F1  &mo 1  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT  &kp RBKT   &kp SQT
+&kp ESC    &none  &none  &none  &none  &none  &none  &kp HOME  &kp UP    &kp END    &kp PG_UP  &kp BSPC
+&kp TAB    &none  &none  &none  &none  &none  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  &none
+&kp LSHFT  &none  &none  &none  &none  &none  &none  &none     &none     &none      &none      &kp RET
+&none      &none  &none  &none  &none  &none  &none  &none     &none     &none      &none
             >;
         };
 
@@ -99,6 +89,25 @@
 &kp TAB    &kp A     &kp S     &kp D     &kp F     &kp G      &kp H     &kp J      &kp K      &kp L     &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z     &kp X     &kp C     &kp V     &kp B      &kp N     &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp ENTER
 &kp LCTRL  &kp LGUI  &kp LGUI  &kp LGUI  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT   &kp RBKT  &kp GRAVE
+            >;
+        };
+
+        Numbers {
+            bindings = <
+&kp ESC  &none  &none  &none  &none  &none  &none   &kp N7  &kp N8   &kp N9  &none  &kp BSPC
+&kp TAB  &none  &none  &none  &none  &none  &none   &kp N4  &kp N5   &kp N6  &none  &none
+&none    &none  &none  &none  &none  &none  &none   &kp N1  &kp N2   &kp N3  &none  &kp RET
+&none    &none  &none  &none  &none  &none  &kp N0  &kp N0  &kp DOT  &none   &none
+            >;
+        };
+
+        GAPS {
+            label = "Base";
+            bindings = <
+&kp Q      &kp W      &kp F   &kp P  &kp B     &kp ESC    &kp BSPC  &kp J      &kp L     &kp U      &kp Y    &kp SEMI
+&kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E      &kp I    &kp O
+&kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
+&kp LSHFT  &kp LCTRL  &kp F1  &mo 0  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT  &kp RBKT   &kp SQT
             >;
         };
     };
