@@ -58,6 +58,11 @@
             bindings = <&to 2>;
             key-positions = <36 41>;
         };
+
+        CLRBT1 {
+            bindings = <&bt BT_CLR>;
+            key-positions = <36 24 0 12>;
+        };
     };
 
     keymap {
