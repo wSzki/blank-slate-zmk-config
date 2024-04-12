@@ -60,8 +60,23 @@
         };
 
         CLRBT1 {
-            bindings = <&bt BT_CLR>;
-            key-positions = <36 24 0 12>;
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <46 42 12>;
+        };
+
+        CLR2 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <46 43 12>;
+        };
+
+        CLR3 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <46 44 12>;
+        };
+
+        CLR4 {
+            bindings = <&bt BT_SEL 3>;
+            key-positions = <46 45 12>;
         };
     };
 
