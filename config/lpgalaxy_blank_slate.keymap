@@ -58,26 +58,6 @@
             bindings = <&to 2>;
             key-positions = <36 41>;
         };
-
-        CLRBT1 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <46 42 12>;
-        };
-
-        CLR2 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <46 43 12>;
-        };
-
-        CLR3 {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <46 44 12>;
-        };
-
-        CLR4 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <46 45 12>;
-        };
     };
 
     keymap {
@@ -86,7 +66,7 @@
         BaseColemakDH {
             label = "Baseb";
             bindings = <
-&kp ESC    &kp Q     &kp W   &kp F  &kp P     &kp B        &kp J      &kp L     &kp U      &kp Y     &kp SEMI   &kp BSPC
+&lt 5 ESC  &kp Q     &kp W   &kp F  &kp P     &kp B        &kp J      &kp L     &kp U      &kp Y     &kp SEMI   &kp BSPC
 &kp TAB    &kp A     &kp R   &kp S  &kp T     &kp G        &kp M      &kp N     &kp E      &kp I     &kp O      &kp APOS
 &kp LSHFT  &kp Z     &kp X   &kp C  &kp D     &kp V        &kp K      &kp H     &kp COMMA  &kp DOT   &kp UP     &kp ENTER
 &kp LCTRL  &kp LGUI  &tog 2  &mo 1  &kp LALT  &lt 1 SPACE  &kp GRAVE  &kp FSLH  &kp LEFT   &kp DOWN  &kp RIGHT
@@ -128,6 +108,15 @@
 &kp A      &kp R      &kp S   &kp T  &kp G     &kp TAB    &kp RET   &kp M      &kp N     &kp E      &kp I    &kp O
 &kp Z      &kp X      &kp C   &kp D  &kp V     &kp GRAVE  &kp BSLH  &kp K      &kp H     &kp COMMA  &kp DOT  &kp FSLH
 &kp LSHFT  &kp LCTRL  &kp F1  &mo 0  &kp LALT  &kp SPACE  &kp BSPC  &kp ENTER  &kp LBKT  &kp RBKT   &kp SQT
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none        &bt BT_CLR
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none        &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none        &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &bootloader
             >;
         };
     };
