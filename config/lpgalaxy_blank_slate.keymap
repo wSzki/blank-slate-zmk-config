@@ -67,6 +67,20 @@
             bindings = <&kp RWIN &kp APOS &kp E>;
             label = "EACCENT";
         };
+
+        egrave: egrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RWIN &kp GRAVE &kp E>;
+            label = "EGRAVE";
+        };
+
+        agrave: agrave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RWIN &kp GRAVE &kp A>;
+            label = "AGRAVE";
+        };
     };
 
     keymap {
