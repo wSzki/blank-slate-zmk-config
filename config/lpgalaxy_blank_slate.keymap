@@ -60,6 +60,15 @@
         };
     };
 
+    macros {
+        eaccent: eaccent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RWIN &kp APOS &kp E>;
+            label = "EACCENT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
