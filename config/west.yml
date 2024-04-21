@@ -5,9 +5,9 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware/
   projects:
-    - name: feat/pointers-move-scroll
+    - name: zmk
       remote: petejohanson
-      revision: main
+      revision: feat/pointers-move-scroll
       import: app/west.yml
     - name: blank-slate-zmk-module
       remote: petejohanson
