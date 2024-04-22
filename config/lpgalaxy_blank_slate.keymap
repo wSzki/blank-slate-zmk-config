@@ -138,7 +138,7 @@
 
         layer_5 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none        &bt BT_CLR
+&none  &mmv MOVE_UP   &none  &none  &none  &none  &none  &none  &none  &none  &none        &bt BT_CLR
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none        &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none        &none
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &bootloader
