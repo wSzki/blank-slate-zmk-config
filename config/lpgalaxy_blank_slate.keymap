@@ -90,10 +90,10 @@
         BaseColemakDH {
             label = "Baseb";
             bindings = <
-&lt 5 ESC  &kp Q     &kp W   &kp F  &kp P     &kp B        &kp J        &kp L     &kp U      &kp Y     &kp SEMI   &kp BSPC
-&kp TAB    &kp A     &kp R   &kp S  &kp T     &kp G        &kp M        &kp N     &kp E      &kp I     &kp O      &kp APOS
-&kp LSHFT  &kp Z     &kp X   &kp C  &kp D     &kp V        &kp K        &kp H     &kp COMMA  &kp DOT   &kp UP     &kp ENTER
-&kp LCTRL  &kp LGUI  &tog 2  &mo 1  &kp LALT  &lt 1 SPACE  &lt 5 GRAVE  &kp FSLH  &kp LEFT   &kp DOWN  &kp RIGHT
+&lt 5 ESC  &kp Q     &kp W   &kp F  &kp P     &kp B        &kp J      &kp L     &kp U      &kp Y     &kp SEMI   &kp BSPC
+&kp TAB    &kp A     &kp R   &kp S  &kp T     &kp G        &kp M      &kp N     &kp E      &kp I     &kp O      &kp APOS
+&kp LSHFT  &kp Z     &kp X   &kp C  &kp D     &kp V        &kp K      &kp H     &kp COMMA  &kp DOT   &kp UP     &kp ENTER
+&kp LCTRL  &kp LGUI  &tog 2  &mo 1  &kp LALT  &lt 1 SPACE  &kp GRAVE  &kp FSLH  &kp LEFT   &kp DOWN  &kp RIGHT
             >;
         };
 
